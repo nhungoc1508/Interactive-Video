@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS and video</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="front">This is definitely not a Rick Roll. Just click.</div>
+            <div class="back">
+                <video autoplay>
+                    <source src="musicvideo.mp4" type="video/mp4">
+                    The video can't be loaded
+                </video>
+                <div class="choices">
+                    <button id="continue-btn">Continue</button>
+                    <button id="skip-btn">Skip</button>
+                </div>
+            </div>
+        </div>
+        <div class="move-around">
+            <p>Click anywhere to move me!</p>
+        </div>
+    </div>
+</body>
+
+</html>
