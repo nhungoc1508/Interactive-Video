@@ -12,22 +12,55 @@
 
 <body>
     <div class="wrapper">
-        <div class="container">
-            <div class="front">This is definitely not a Rick Roll. Just click.</div>
-            <div class="back">
-                <video autoplay>
-                    <source src="musicvideo.mp4" type="video/mp4">
-                    The video can't be loaded
-                </video>
-                <div class="choices">
-                    <button id="continue-btn">Continue</button>
-                    <button id="skip-btn">Skip</button>
+        <div class="small-wrapper">
+            <div class="blocks">
+                <a href="https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G?si=1d934f778ce2456e" target="_blank">
+                    <div class="block-text">
+                        <p>Listen to Bones on Spotify</p>
+                    </div>
+                    <div class="block-front">
+                    </div>
+                    <div class="block-back" id="block0"></div>
+                </a>
+                <a href="https://imaginedragons.lnk.to/Mercury" target="_blank">
+                    <div class="block-text">
+                        <p>Pre-order Mercury - Act 2</p>
+                    </div>
+                    <div class="block-front"></div>
+                    <div class="block-back" id="block1"></div>
+                </a>
+                <a href="https://www.imaginedragonsmusic.com/tour" target="_blank">
+                    <div class="block-text">
+                        <p>Get tickets to the Mercury World Tour</p>
+                    </div>
+                    <div class="block-front"></div>
+                    <div class="block-back" id="block2"></div>
+                </a>
+            </div>
+        </div>
+        <div class="small-wrapper">
+            <div class="container">
+                <div class="front">Click to watch the music video</div>
+                <div class="back">
+                    <video autoplay controls>
+                        <source src="./videos/Bones-MV.mp4" type="video/mp4">
+                        The video can't be loaded
+                    </video>
+                    <div class="choices">
+                        <div class="choices-container">
+                            <p>This video is zombie-themed. Do you want to continue watching?</p>
+                            <div>
+                                <button id="continue-btn">Continue</button>
+                                <button id="skip-btn">Skip</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="move-around">
+        <!-- <div class="move-around">
             <p>Click anywhere to move me!</p>
-        </div>
+        </div> -->
     </div>
 </body>
 

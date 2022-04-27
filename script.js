@@ -35,7 +35,7 @@ continueBtn.addEventListener("click", () => {
 
 skipBtn.addEventListener("click", () => {
     choices.style.visibility = "hidden";
-    video.currentTime = 210;
+    video.currentTime = 165;
     video.play();
 })
 
@@ -44,6 +44,7 @@ video.addEventListener("ended", () => {
     shownChoices = false;
 })
 
+/*
 const box = document.querySelector(".move-around");
 let rotateAngle = 0;
 let bounds = box.getBoundingClientRect();
@@ -60,3 +61,17 @@ document.addEventListener("mousedown", (event) => {
     };
     box.style.transform = `translate(${movement.x}px, ${movement.y}px) rotate(${rotateAngle}deg)`;
 })
+*/
+
+const blocks = document.querySelector(".blocks").children;
+for (let block of blocks) {
+    const overlayText = block.children[0];
+    const innerBlock = block.children[1];
+    block.addEventListener("mouseover", () => {
+        innerBlock.style.width = '0px';
+    })
+
+    block.addEventListener("mouseout", () => {
+        innerBlock.style.width = '300px';
+    })
+}

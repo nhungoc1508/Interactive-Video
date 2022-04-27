@@ -1,26 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
 }
 
 .wrapper {
     background-color: bisque;
+    background-image: url("./images/bones-artwork.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 150vh;
+}
+
+.small-wrapper {
     display: grid;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 100%;
+    height: 75vh;
     align-content: center;
     justify-content: center;
 }
 
+.blocks {
+    width: 960px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    position: relative;
+}
+
+.blocks a div {
+    transition: all 0.5s;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+.block-text {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    mix-blend-mode: difference;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.block-text p {
+    width: 200px;
+}
+
+.block-front {
+    z-index: 1;
+    color: white;
+    background-color: black;
+}
+
+.block-back {
+    z-index: 0;
+    background-color: azure;
+}
+
+#block0 {
+    background-image: url("./images/bones-artwork2.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+#block1 {
+    background-image: url("./images/mercury_act2.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+#block2 {
+    background-image: url("./images/band.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
+}
+
 .container {
-    width: 640px; /* 4:3 ratio */
-    height: 480px;
+    width: 960px; /* 4:3 ratio */
+    height: 409px;
     position: relative;
     transform-style: preserve-3d;
 }
 
 .front {
-    background-color: rgb(198, 241, 241);
+    color: white;
+    background-color: black;
     display: grid;
     align-content: center;
     justify-content: center;
@@ -33,7 +115,7 @@ body {
 }
 
 .back {
-    background-color: rgb(198, 241, 241);
+    background-color: black;
     position: absolute;
     top: 0;
     left: 0;
@@ -64,14 +146,39 @@ body {
 }
 
 .choices {
-    width: calc(100% - 20px);
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     visibility: hidden;
+}
+
+.choices-container div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choices-container div button {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    border: 0;
+    transition: 0.3s;
+    padding: 10px;
+    width: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.choices-container div button:hover {
+    background-color: white;
+    color: black;
 }
 
 .move-around {
