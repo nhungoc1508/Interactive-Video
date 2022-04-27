@@ -6,6 +6,16 @@ const skipBtn = document.querySelector("#skip-btn");
 
 let shownChoices = false;
 
+video.addEventListener("canplaythrough", () => {
+    const loadingScreen = document.querySelector(".loading");
+    setTimeout(() => {
+        loadingScreen.style.opacity = 0;
+    }, 500);
+    setTimeout(() => {
+        loadingScreen.classList.add("hidden");
+    }, 1500);
+})
+
 container.addEventListener("click", () => {
     if (!container.classList.contains("anim")) {
         container.classList.add("anim");
