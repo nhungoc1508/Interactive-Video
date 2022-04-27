@@ -4,6 +4,8 @@ body {
     margin: 0;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .loading {

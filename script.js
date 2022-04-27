@@ -12,6 +12,8 @@ video.addEventListener("canplaythrough", () => {
         loadingScreen.style.opacity = 0;
     }, 500);
     setTimeout(() => {
+        document.body.style.height = '150vh';
+        document.body.style.overflow = 'scroll';
         loadingScreen.classList.add("hidden");
     }, 1500);
 })
