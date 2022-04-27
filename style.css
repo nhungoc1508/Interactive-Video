@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-content: center;
     opacity: 1;
-    transition: all 1s;
+    transition: all 0.7s;
 }
 
 .hidden {
