@@ -10,12 +10,12 @@ video.addEventListener("canplaythrough", () => {
     const loadingScreen = document.querySelector(".loading");
     setTimeout(() => {
         loadingScreen.style.opacity = 0;
-    }, 300);
+    }, 500);
     setTimeout(() => {
         document.body.style.height = '150vh';
         document.body.style.overflow = 'scroll';
         loadingScreen.classList.add("hidden");
-    }, 1000);
+    }, 1500);
 })
 
 container.addEventListener("click", () => {
